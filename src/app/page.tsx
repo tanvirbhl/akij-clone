@@ -6,6 +6,7 @@ import SisterConcernsSection from "@/components/home/SisterConcernsSection";
 import CareerSection from "@/components/home/CareerSection";
 import ContactSection from "@/components/home/ContactSection";
 import LeadershipSection from "@/components/home/LeadershipSection";
+import OpenPositionsSection from "@/components/home/OpenPositionsSection";
 
 export default function Home() {
   return (
@@ -26,9 +27,9 @@ export default function Home() {
         <AboutSection />
       </div>
       <LeadershipSection />
-
       <div id="career">
-        <CareerSection />
+        <CareerSection/>
+        <OpenPositionsSection/> 
       </div>
 
       <div id="contact">
