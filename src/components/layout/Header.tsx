@@ -47,24 +47,30 @@ export default function Header() {
     return () => observer.disconnect();
   }, []);
 
-  // Smooth scroll handler with offset for the fixed header
+ // Smooth scroll handler with offset for the fixed header
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
+    
+    // Close the mobile menu
     setMobileMenuOpen(false);
     
-    const section = document.querySelector(href);
-    if (section) {
-      const headerOffset = 90; // Approximate height of your fixed header
-      const elementPosition = section.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.scrollY - headerOffset;
+    // Delay the scroll slightly so the mobile menu collapse doesn't interrupt it
+    setTimeout(() => {
+      const section = document.querySelector(href);
+      if (section) {
+        // Adjust this offset if your mobile header height is different than desktop
+        const headerOffset = window.innerWidth < 1024 ? 80 : 90; 
+        
+        const elementPosition = section.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.scrollY - headerOffset;
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      });
-    }
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+        });
+      }
+    }, 150); // 150ms delay gives the menu time to animate out
   };
-
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-gray-100 ${
