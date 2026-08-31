@@ -28,8 +28,8 @@ export default function Home() {
       </div>
       <LeadershipSection />
       <div id="career">
-        <CareerSection/>
-        <OpenPositionsSection/> 
+        <CareerSection />
+        <OpenPositionsSection />
       </div>
 
       <div id="contact">
