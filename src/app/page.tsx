@@ -7,6 +7,7 @@ import CareerSection from "@/components/home/CareerSection";
 import ContactSection from "@/components/home/ContactSection";
 import LeadershipSection from "@/components/home/LeadershipSection";
 import OpenPositionsSection from "@/components/home/OpenPositionsSection";
+import CompanyVideoSection from "@/components/home/CompanyVideoSection";
 
 export default function Home() {
   return (
@@ -14,6 +15,10 @@ export default function Home() {
       <div id="home"></div>
       <div id="news">
         <NewsSection />
+      </div>
+
+      <div>
+        <CompanyVideoSection/>
       </div>
 
       <div id="newsletters">

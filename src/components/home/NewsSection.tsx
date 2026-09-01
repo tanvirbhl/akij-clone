@@ -4,6 +4,7 @@ import { Calendar, ArrowUpRight, Share2 } from "lucide-react";
 import { motion } from "framer-motion";
 import { newsData } from "@/data/news";
 import Link from "next/link";
+import CompanyVideoSection from "./CompanyVideoSection";
 
 export default function NewsSection() {
   return (
@@ -171,6 +172,9 @@ export default function NewsSection() {
           </Link>
         </motion.div>
       </div>
+      {/* <div className="mt-2">
+        <CompanyVideoSection/>
+      </div> */}
     </section>
   );
 }
