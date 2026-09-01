@@ -8,6 +8,7 @@ import ContactSection from "@/components/home/ContactSection";
 import LeadershipSection from "@/components/home/LeadershipSection";
 import OpenPositionsSection from "@/components/home/OpenPositionsSection";
 import CompanyVideoSection from "@/components/home/CompanyVideoSection";
+import ClientsSection from "@/components/home/ClientsSection";
 
 export default function Home() {
   return (
@@ -33,6 +34,7 @@ export default function Home() {
       </div>
       <LeadershipSection />
       <div id="career">
+        <ClientsSection />
         <CareerSection />
         <OpenPositionsSection />
       </div>
