@@ -10,12 +10,15 @@ import OpenPositionsSection from "@/components/home/OpenPositionsSection";
 import CompanyVideoSection from "@/components/home/CompanyVideoSection";
 import ClientsSection from "@/components/home/ClientsSection";
 
-export default function Home() {
+import { getNews } from "@/app/actions/news";
+
+export default async function Home() {
+  const { featuredNews, recentNews } = await getNews();
   return (
     <>
       <div id="home"></div>
       <div id="news">
-        <NewsSection />
+        <NewsSection featuredNews={featuredNews} recentNews={recentNews} />
       </div>
 
       <div>
