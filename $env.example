@@ -1,0 +1,10 @@
+ADMIN_PASSWORD=admin
+
+
+# MongoDB Connection String (Get this from MongoDB Atlas)
+MONGODB_URI=mongodb://tanvirbhl05_db_user:QGg4FLEKATwubxSo@ac-xlyphdu-shard-00-00.gimyie5.mongodb.net:27017,ac-xlyphdu-shard-00-01.gimyie5.mongodb.net:27017,ac-xlyphdu-shard-00-02.gimyie5.mongodb.net:27017/?ssl=true&replicaSet=atlas-gp6v0l-shard-0&authSource=admin&appName=akij
+
+# Cloudinary Credentials (Get these from your Cloudinary Dashboard)
+CLOUDINARY_CLOUD_NAME=cpmjjndt
+CLOUDINARY_API_KEY=234383153294873
+CLOUDINARY_API_SECRET=X_5o7HPOKKkQvEqgjTztK6J47YE
