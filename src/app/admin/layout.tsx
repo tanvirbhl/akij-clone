@@ -1,6 +1,13 @@
 import Link from "next/link";
 import { logoutAdmin } from "@/app/actions/auth";
-import { LayoutDashboard, Briefcase, Newspaper, LogOut, FileText } from "lucide-react";
+import {
+  LayoutDashboard,
+  Briefcase,
+  Newspaper,
+  LogOut,
+  FileText,
+  Building2,
+} from "lucide-react";
 
 export default function AdminLayout({
   children,
@@ -43,6 +50,13 @@ export default function AdminLayout({
           >
             <FileText size={20} />
             Manage Newsletters
+          </Link>
+          <Link
+            href="/admin/sister-concerns"
+            className="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-400 hover:bg-white/5 hover:text-white transition-colors"
+          >
+            <Building2 size={20} />
+            Sister Concerns
           </Link>
         </nav>
 
