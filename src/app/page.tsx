@@ -11,12 +11,19 @@ import CompanyVideoSection from "@/components/home/CompanyVideoSection";
 import ClientsSection from "@/components/home/ClientsSection";
 
 import { getNews } from "@/app/actions/news";
+import { getAllNewsletters } from "@/app/actions/newsletter";
 
 export default async function Home() {
+  // 1. Fetch ALL dynamic data here at the top
   const { featuredNews, recentNews } = await getNews();
+  const newsletters = await getAllNewsletters(); // <-- ADDED THIS
+
   return (
     <>
-      <div id="home"></div>
+      <div id="home">
+        {/* Waiting for Hero Section */}
+      </div>
+
       <div id="news">
         <NewsSection featuredNews={featuredNews} recentNews={recentNews} />
       </div>
@@ -26,8 +33,10 @@ export default async function Home() {
       </div>
 
       <div id="newsletters">
-        <NewsletterSection />
+        {/* 2. Pass the fetched 'newsletters' variable, not the function */}
+        <NewsletterSection newsletters={newsletters} /> 
       </div>
+
       <div id="brands">
         <BrandsSection />
       </div>
@@ -35,9 +44,13 @@ export default async function Home() {
       <div id="about">
         <AboutSection />
       </div>
+
       <LeadershipSection />
+      
+      {/* 3. Moved ClientsSection outside of the "career" wrapper */}
+      <ClientsSection />
+
       <div id="career">
-        <ClientsSection />
         <CareerSection />
         <OpenPositionsSection />
       </div>
